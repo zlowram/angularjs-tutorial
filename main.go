@@ -7,7 +7,7 @@ import (
 
 func main() {
 	log.Println("Listening at 8080...")
-	log.Fatal(http.ListenAndServe(":8080", logger(http.FileServer(http.Dir("static")))))
+	log.Fatal(http.ListenAndServe(":8080", logger(http.FileServer(http.Dir("app")))))
 }
 
 func logger(handler http.Handler) http.Handler {
